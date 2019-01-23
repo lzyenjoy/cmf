@@ -18,7 +18,8 @@ class IndexController extends HomeBaseController
     {
         return $this->fetch();
     }
-    public function addTest(){
-        return view();
+    public function CreatPass(){
+        $result = "###" . md5(md5(config('database.authcode') . '123456'));
+        echo $result;die;
     }
 }

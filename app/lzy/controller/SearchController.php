@@ -8,7 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use cmf\controller\HomeBaseController;
 

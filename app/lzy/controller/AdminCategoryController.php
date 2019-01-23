@@ -8,11 +8,11 @@
 // +----------------------------------------------------------------------
 // | Author: 小夏 < 449134904@qq.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use app\admin\model\RouteModel;
 use cmf\controller\AdminBaseController;
-use app\portal\model\PortalCategoryModel;
+use app\lzy\model\PortalCategoryModel;
 use think\Db;
 use app\admin\model\ThemeModel;
 

@@ -8,10 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use cmf\controller\HomeBaseController;
-use app\portal\model\PortalCategoryModel;
+use app\lzy\model\PortalCategoryModel;
 
 class ListController extends HomeBaseController
 {

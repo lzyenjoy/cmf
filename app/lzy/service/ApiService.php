@@ -8,10 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\service;
+namespace app\lzy\service;
 
-use app\portal\model\PortalPostModel;
-use app\portal\model\PortalCategoryModel;
+use app\lzy\model\PortalPostModel;
+use app\lzy\model\PortalCategoryModel;
 use think\Db;
 use think\db\Query;
 

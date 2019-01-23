@@ -8,9 +8,9 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\api;
+namespace app\lzy\api;
 
-use app\portal\model\PortalPostModel;
+use app\lzy\model\PortalPostModel;
 use think\db\Query;
 
 class PageApi

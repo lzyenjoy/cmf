@@ -8,13 +8,13 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use cmf\controller\AdminBaseController;
 
 /**
  * Class AdminIndexController
- * @package app\portal\controller
+ * @package app\lzy\controller
  * @adminMenuRoot(
  *     'name'   =>'门户管理',
  *     'action' =>'default',

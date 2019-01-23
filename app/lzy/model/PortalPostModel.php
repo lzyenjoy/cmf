@@ -8,7 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: 小夏 < 449134904@qq.com>
 // +----------------------------------------------------------------------
-namespace app\portal\model;
+namespace app\lzy\model;
 
 use app\admin\model\RouteModel;
 use think\Model;

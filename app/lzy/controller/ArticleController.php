@@ -8,12 +8,12 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use cmf\controller\HomeBaseController;
-use app\portal\model\PortalCategoryModel;
-use app\portal\service\PostService;
-use app\portal\model\PortalPostModel;
+use app\lzy\model\PortalCategoryModel;
+use app\lzy\service\PostService;
+use app\lzy\model\PortalPostModel;
 use think\Db;
 
 class ArticleController extends HomeBaseController

@@ -8,12 +8,12 @@
 // +----------------------------------------------------------------------
 // | Author: 小夏 < 449134904@qq.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use cmf\controller\AdminBaseController;
-use app\portal\model\PortalPostModel;
-use app\portal\service\PostService;
-use app\portal\model\PortalCategoryModel;
+use app\lzy\model\PortalPostModel;
+use app\lzy\service\PostService;
+use app\lzy\model\PortalCategoryModel;
 use think\Db;
 use app\admin\model\ThemeModel;
 

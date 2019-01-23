@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-01-22 22:31:20
+Date: 2019-01-23 23:43:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,7 +36,7 @@ CREATE TABLE `lzy_admin_menu` (
   KEY `status` (`status`),
   KEY `parent_id` (`parent_id`),
   KEY `controller` (`controller`)
-) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8mb4 COMMENT='后台菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=214 DEFAULT CHARSET=utf8mb4 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of lzy_admin_menu
@@ -203,6 +203,54 @@ INSERT INTO `lzy_admin_menu` VALUES ('159', '6', '1', '1', '10000', 'user', 'Adm
 INSERT INTO `lzy_admin_menu` VALUES ('160', '159', '1', '0', '10000', 'user', 'AdminUserAction', 'edit', '', '编辑用户操作', '', '编辑用户操作');
 INSERT INTO `lzy_admin_menu` VALUES ('161', '159', '2', '0', '10000', 'user', 'AdminUserAction', 'editPost', '', '编辑用户操作提交', '', '编辑用户操作提交');
 INSERT INTO `lzy_admin_menu` VALUES ('162', '159', '1', '0', '10000', 'user', 'AdminUserAction', 'sync', '', '同步用户操作', '', '同步用户操作');
+INSERT INTO `lzy_admin_menu` VALUES ('163', '7', '1', '0', '10000', 'admin', 'Link', 'addTest', '', '注释菜单测试', '', '注释菜单测试');
+INSERT INTO `lzy_admin_menu` VALUES ('164', '121', '1', '1', '10000', 'lzy', 'AdminArticle', 'index', '', '文章管理', '', '文章列表');
+INSERT INTO `lzy_admin_menu` VALUES ('165', '164', '1', '0', '10000', 'lzy', 'AdminArticle', 'add', '', '添加文章', '', '添加文章');
+INSERT INTO `lzy_admin_menu` VALUES ('166', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'addPost', '', '添加文章提交', '', '添加文章提交');
+INSERT INTO `lzy_admin_menu` VALUES ('167', '164', '1', '0', '10000', 'lzy', 'AdminArticle', 'edit', '', '编辑文章', '', '编辑文章');
+INSERT INTO `lzy_admin_menu` VALUES ('168', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'editPost', '', '编辑文章提交', '', '编辑文章提交');
+INSERT INTO `lzy_admin_menu` VALUES ('169', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'delete', '', '文章删除', '', '文章删除');
+INSERT INTO `lzy_admin_menu` VALUES ('170', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'publish', '', '文章发布', '', '文章发布');
+INSERT INTO `lzy_admin_menu` VALUES ('171', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'top', '', '文章置顶', '', '文章置顶');
+INSERT INTO `lzy_admin_menu` VALUES ('172', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'recommend', '', '文章推荐', '', '文章推荐');
+INSERT INTO `lzy_admin_menu` VALUES ('173', '164', '2', '0', '10000', 'lzy', 'AdminArticle', 'listOrder', '', '文章排序', '', '文章排序');
+INSERT INTO `lzy_admin_menu` VALUES ('174', '121', '1', '1', '10000', 'lzy', 'AdminCategory', 'index', '', '分类管理', '', '文章分类列表');
+INSERT INTO `lzy_admin_menu` VALUES ('175', '174', '1', '0', '10000', 'lzy', 'AdminCategory', 'add', '', '添加文章分类', '', '添加文章分类');
+INSERT INTO `lzy_admin_menu` VALUES ('176', '174', '2', '0', '10000', 'lzy', 'AdminCategory', 'addPost', '', '添加文章分类提交', '', '添加文章分类提交');
+INSERT INTO `lzy_admin_menu` VALUES ('177', '174', '1', '0', '10000', 'lzy', 'AdminCategory', 'edit', '', '编辑文章分类', '', '编辑文章分类');
+INSERT INTO `lzy_admin_menu` VALUES ('178', '174', '2', '0', '10000', 'lzy', 'AdminCategory', 'editPost', '', '编辑文章分类提交', '', '编辑文章分类提交');
+INSERT INTO `lzy_admin_menu` VALUES ('179', '174', '1', '0', '10000', 'lzy', 'AdminCategory', 'select', '', '文章分类选择对话框', '', '文章分类选择对话框');
+INSERT INTO `lzy_admin_menu` VALUES ('180', '174', '2', '0', '10000', 'lzy', 'AdminCategory', 'listOrder', '', '文章分类排序', '', '文章分类排序');
+INSERT INTO `lzy_admin_menu` VALUES ('181', '174', '2', '0', '10000', 'lzy', 'AdminCategory', 'toggle', '', '文章分类显示隐藏', '', '文章分类显示隐藏');
+INSERT INTO `lzy_admin_menu` VALUES ('182', '174', '2', '0', '10000', 'lzy', 'AdminCategory', 'delete', '', '删除文章分类', '', '删除文章分类');
+INSERT INTO `lzy_admin_menu` VALUES ('184', '121', '1', '1', '10000', 'lzy', 'AdminPage', 'index', '', '页面管理', '', '页面管理');
+INSERT INTO `lzy_admin_menu` VALUES ('185', '184', '1', '0', '10000', 'lzy', 'AdminPage', 'add', '', '添加页面', '', '添加页面');
+INSERT INTO `lzy_admin_menu` VALUES ('186', '184', '2', '0', '10000', 'lzy', 'AdminPage', 'addPost', '', '添加页面提交', '', '添加页面提交');
+INSERT INTO `lzy_admin_menu` VALUES ('187', '184', '1', '0', '10000', 'lzy', 'AdminPage', 'edit', '', '编辑页面', '', '编辑页面');
+INSERT INTO `lzy_admin_menu` VALUES ('188', '184', '2', '0', '10000', 'lzy', 'AdminPage', 'editPost', '', '编辑页面提交', '', '编辑页面提交');
+INSERT INTO `lzy_admin_menu` VALUES ('189', '184', '2', '0', '10000', 'lzy', 'AdminPage', 'delete', '', '删除页面', '', '删除页面');
+INSERT INTO `lzy_admin_menu` VALUES ('190', '121', '1', '1', '10000', 'lzy', 'AdminTag', 'index', '', '文章标签', '', '文章标签');
+INSERT INTO `lzy_admin_menu` VALUES ('191', '190', '1', '0', '10000', 'lzy', 'AdminTag', 'add', '', '添加文章标签', '', '添加文章标签');
+INSERT INTO `lzy_admin_menu` VALUES ('192', '190', '2', '0', '10000', 'lzy', 'AdminTag', 'addPost', '', '添加文章标签提交', '', '添加文章标签提交');
+INSERT INTO `lzy_admin_menu` VALUES ('193', '190', '2', '0', '10000', 'lzy', 'AdminTag', 'upStatus', '', '更新标签状态', '', '更新标签状态');
+INSERT INTO `lzy_admin_menu` VALUES ('194', '190', '2', '0', '10000', 'lzy', 'AdminTag', 'delete', '', '删除文章标签', '', '删除文章标签');
+INSERT INTO `lzy_admin_menu` VALUES ('195', '132', '2', '0', '10000', 'portal', 'AdminCategory', 'toggle', '', '文章分类显示隐藏', '', '文章分类显示隐藏');
+INSERT INTO `lzy_admin_menu` VALUES ('196', '6', '1', '1', '50', 'admin', 'Test', 'index', '', '测试链接', '', '测试链接管理');
+INSERT INTO `lzy_admin_menu` VALUES ('197', '196', '1', '0', '10000', 'admin', 'Test', 'add', '', '添加友情链接', '', '添加友情链接');
+INSERT INTO `lzy_admin_menu` VALUES ('198', '196', '2', '0', '10000', 'admin', 'Test', 'addPost', '', '添加友情链接提交保存', '', '添加友情链接提交保存');
+INSERT INTO `lzy_admin_menu` VALUES ('199', '196', '1', '0', '10000', 'admin', 'Test', 'edit', '', '编辑友情链接', '', '编辑友情链接');
+INSERT INTO `lzy_admin_menu` VALUES ('200', '196', '2', '0', '10000', 'admin', 'Test', 'editPost', '', '编辑友情链接提交保存', '', '编辑友情链接提交保存');
+INSERT INTO `lzy_admin_menu` VALUES ('201', '196', '2', '0', '10000', 'admin', 'Test', 'delete', '', '删除友情链接', '', '删除友情链接');
+INSERT INTO `lzy_admin_menu` VALUES ('202', '196', '2', '0', '10000', 'admin', 'Test', 'listOrder', '', '友情链接排序', '', '友情链接排序');
+INSERT INTO `lzy_admin_menu` VALUES ('203', '196', '2', '0', '10000', 'admin', 'Test', 'toggle', '', '友情链接显示隐藏', '', '友情链接显示隐藏');
+INSERT INTO `lzy_admin_menu` VALUES ('204', '121', '1', '1', '10000', 'lzy', 'AdminShop', 'index', '', '测试注解管理', '', '测试注解管理');
+INSERT INTO `lzy_admin_menu` VALUES ('206', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'addPost', '', '添加文章提交', '', '添加文章提交');
+INSERT INTO `lzy_admin_menu` VALUES ('207', '204', '1', '0', '10000', 'lzy', 'AdminShop', 'edit', '', '编辑文章', '', '编辑文章');
+INSERT INTO `lzy_admin_menu` VALUES ('208', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'editPost', '', '编辑文章提交', '', '编辑文章提交');
+INSERT INTO `lzy_admin_menu` VALUES ('209', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'delete', '', '文章删除', '', '文章删除');
+INSERT INTO `lzy_admin_menu` VALUES ('210', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'publish', '', '文章发布', '', '文章发布');
+INSERT INTO `lzy_admin_menu` VALUES ('211', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'top', '', '文章置顶', '', '文章置顶');
+INSERT INTO `lzy_admin_menu` VALUES ('212', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'recommend', '', '文章推荐', '', '文章推荐');
 
 -- ----------------------------
 -- Table structure for lzy_asset
@@ -263,7 +311,7 @@ CREATE TABLE `lzy_auth_rule` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`) USING BTREE,
   KEY `module` (`app`,`status`,`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8mb4 COMMENT='权限规则表';
+) ENGINE=InnoDB AUTO_INCREMENT=214 DEFAULT CHARSET=utf8mb4 COMMENT='权限规则表';
 
 -- ----------------------------
 -- Records of lzy_auth_rule
@@ -430,6 +478,57 @@ INSERT INTO `lzy_auth_rule` VALUES ('159', '1', 'user', 'admin_url', 'user/Admin
 INSERT INTO `lzy_auth_rule` VALUES ('160', '1', 'user', 'admin_url', 'user/AdminUserAction/edit', '', '编辑用户操作', '');
 INSERT INTO `lzy_auth_rule` VALUES ('161', '1', 'user', 'admin_url', 'user/AdminUserAction/editPost', '', '编辑用户操作提交', '');
 INSERT INTO `lzy_auth_rule` VALUES ('162', '1', 'user', 'admin_url', 'user/AdminUserAction/sync', '', '同步用户操作', '');
+INSERT INTO `lzy_auth_rule` VALUES ('163', '1', 'admin', 'admin_url', 'admin/Link/addTest', '', '注释菜单测试', '');
+INSERT INTO `lzy_auth_rule` VALUES ('164', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/index', '', '文章管理', '');
+INSERT INTO `lzy_auth_rule` VALUES ('165', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/add', '', '添加文章', '');
+INSERT INTO `lzy_auth_rule` VALUES ('166', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/addPost', '', '添加文章提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('167', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/edit', '', '编辑文章', '');
+INSERT INTO `lzy_auth_rule` VALUES ('168', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/editPost', '', '编辑文章提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('169', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/delete', '', '文章删除', '');
+INSERT INTO `lzy_auth_rule` VALUES ('170', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/publish', '', '文章发布', '');
+INSERT INTO `lzy_auth_rule` VALUES ('171', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/top', '', '文章置顶', '');
+INSERT INTO `lzy_auth_rule` VALUES ('172', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/recommend', '', '文章推荐', '');
+INSERT INTO `lzy_auth_rule` VALUES ('173', '1', 'lzy', 'admin_url', 'lzy/AdminArticle/listOrder', '', '文章排序', '');
+INSERT INTO `lzy_auth_rule` VALUES ('174', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/index', '', '分类管理', '');
+INSERT INTO `lzy_auth_rule` VALUES ('175', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/add', '', '添加文章分类', '');
+INSERT INTO `lzy_auth_rule` VALUES ('176', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/addPost', '', '添加文章分类提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('177', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/edit', '', '编辑文章分类', '');
+INSERT INTO `lzy_auth_rule` VALUES ('178', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/editPost', '', '编辑文章分类提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('179', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/select', '', '文章分类选择对话框', '');
+INSERT INTO `lzy_auth_rule` VALUES ('180', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/listOrder', '', '文章分类排序', '');
+INSERT INTO `lzy_auth_rule` VALUES ('181', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/toggle', '', '文章分类显示隐藏', '');
+INSERT INTO `lzy_auth_rule` VALUES ('182', '1', 'lzy', 'admin_url', 'lzy/AdminCategory/delete', '', '删除文章分类', '');
+INSERT INTO `lzy_auth_rule` VALUES ('183', '1', 'lzy', 'admin_url', 'lzy/AdminIndex/default', '', '门户管理', '');
+INSERT INTO `lzy_auth_rule` VALUES ('184', '1', 'lzy', 'admin_url', 'lzy/AdminPage/index', '', '页面管理', '');
+INSERT INTO `lzy_auth_rule` VALUES ('185', '1', 'lzy', 'admin_url', 'lzy/AdminPage/add', '', '添加页面', '');
+INSERT INTO `lzy_auth_rule` VALUES ('186', '1', 'lzy', 'admin_url', 'lzy/AdminPage/addPost', '', '添加页面提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('187', '1', 'lzy', 'admin_url', 'lzy/AdminPage/edit', '', '编辑页面', '');
+INSERT INTO `lzy_auth_rule` VALUES ('188', '1', 'lzy', 'admin_url', 'lzy/AdminPage/editPost', '', '编辑页面提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('189', '1', 'lzy', 'admin_url', 'lzy/AdminPage/delete', '', '删除页面', '');
+INSERT INTO `lzy_auth_rule` VALUES ('190', '1', 'lzy', 'admin_url', 'lzy/AdminTag/index', '', '文章标签', '');
+INSERT INTO `lzy_auth_rule` VALUES ('191', '1', 'lzy', 'admin_url', 'lzy/AdminTag/add', '', '添加文章标签', '');
+INSERT INTO `lzy_auth_rule` VALUES ('192', '1', 'lzy', 'admin_url', 'lzy/AdminTag/addPost', '', '添加文章标签提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('193', '1', 'lzy', 'admin_url', 'lzy/AdminTag/upStatus', '', '更新标签状态', '');
+INSERT INTO `lzy_auth_rule` VALUES ('194', '1', 'lzy', 'admin_url', 'lzy/AdminTag/delete', '', '删除文章标签', '');
+INSERT INTO `lzy_auth_rule` VALUES ('195', '1', 'portal', 'admin_url', 'portal/AdminCategory/toggle', '', '文章分类显示隐藏', '');
+INSERT INTO `lzy_auth_rule` VALUES ('196', '1', 'admin', 'admin_url', 'admin/Test/index', '', '测试链接', '');
+INSERT INTO `lzy_auth_rule` VALUES ('197', '1', 'admin', 'admin_url', 'admin/Test/add', '', '添加友情链接', '');
+INSERT INTO `lzy_auth_rule` VALUES ('198', '1', 'admin', 'admin_url', 'admin/Test/addPost', '', '添加友情链接提交保存', '');
+INSERT INTO `lzy_auth_rule` VALUES ('199', '1', 'admin', 'admin_url', 'admin/Test/edit', '', '编辑友情链接', '');
+INSERT INTO `lzy_auth_rule` VALUES ('200', '1', 'admin', 'admin_url', 'admin/Test/editPost', '', '编辑友情链接提交保存', '');
+INSERT INTO `lzy_auth_rule` VALUES ('201', '1', 'admin', 'admin_url', 'admin/Test/delete', '', '删除友情链接', '');
+INSERT INTO `lzy_auth_rule` VALUES ('202', '1', 'admin', 'admin_url', 'admin/Test/listOrder', '', '友情链接排序', '');
+INSERT INTO `lzy_auth_rule` VALUES ('203', '1', 'admin', 'admin_url', 'admin/Test/toggle', '', '友情链接显示隐藏', '');
+INSERT INTO `lzy_auth_rule` VALUES ('204', '1', 'lzy', 'admin_url', 'lzy/AdminShop/index', '', '测试注解管理', '');
+INSERT INTO `lzy_auth_rule` VALUES ('205', '1', 'lzy', 'admin_url', 'lzy/AdminShop/add', '', '添加测试注解管理', '');
+INSERT INTO `lzy_auth_rule` VALUES ('206', '1', 'lzy', 'admin_url', 'lzy/AdminShop/addPost', '', '添加文章提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('207', '1', 'lzy', 'admin_url', 'lzy/AdminShop/edit', '', '编辑文章', '');
+INSERT INTO `lzy_auth_rule` VALUES ('208', '1', 'lzy', 'admin_url', 'lzy/AdminShop/editPost', '', '编辑文章提交', '');
+INSERT INTO `lzy_auth_rule` VALUES ('209', '1', 'lzy', 'admin_url', 'lzy/AdminShop/delete', '', '文章删除', '');
+INSERT INTO `lzy_auth_rule` VALUES ('210', '1', 'lzy', 'admin_url', 'lzy/AdminShop/publish', '', '文章发布', '');
+INSERT INTO `lzy_auth_rule` VALUES ('211', '1', 'lzy', 'admin_url', 'lzy/AdminShop/top', '', '文章置顶', '');
+INSERT INTO `lzy_auth_rule` VALUES ('212', '1', 'lzy', 'admin_url', 'lzy/AdminShop/recommend', '', '文章推荐', '');
+INSERT INTO `lzy_auth_rule` VALUES ('213', '1', 'lzy', 'admin_url', 'lzy/AdminShop/listOrder', '', '文章排序', '');
 
 -- ----------------------------
 -- Table structure for lzy_comment
@@ -659,7 +758,7 @@ CREATE TABLE `lzy_option` (
 INSERT INTO `lzy_option` VALUES ('1', '1', 'site_info', '{\"site_name\":\"\\u7f57\\u5fd7\\u79b9\\u7684\\u4e13\\u4fee\",\"site_seo_title\":\"\\u7f57\\u5fd7\\u79b9\\u7684\\u88c5\\u4fee\",\"site_seo_keywords\":\"\\u88c5\\u4fee,\\u4fbf\\u5b9c\",\"site_seo_description\":\"ThinkCMF\\u662f\\u7b80\\u7ea6\\u98ce\\u7f51\\u7edc\\u79d1\\u6280\\u53d1\\u5e03\\u7684\\u4e00\\u6b3e\\u7528\\u4e8e\\u5feb\\u901f\\u5f00\\u53d1\\u7684\\u5185\\u5bb9\\u7ba1\\u7406\\u6846\\u67b6\",\"site_icp\":\"\",\"site_gwa\":\"\",\"site_admin_email\":\"\",\"site_analytics\":\"\"}');
 INSERT INTO `lzy_option` VALUES ('2', '1', 'cmf_settings', '{\"open_registration\":\"0\",\"banned_usernames\":\"\"}');
 INSERT INTO `lzy_option` VALUES ('3', '1', 'cdn_settings', '{\"cdn_static_root\":\"\"}');
-INSERT INTO `lzy_option` VALUES ('4', '1', 'admin_settings', '{\"admin_password\":\"\",\"admin_style\":\"simpleadmin\"}');
+INSERT INTO `lzy_option` VALUES ('4', '1', 'admin_settings', '{\"admin_password\":\"\",\"admin_style\":\"flatadmin\"}');
 INSERT INTO `lzy_option` VALUES ('5', '1', 'storage', '{\"storages\":{\"Qiniu\":{\"name\":\"\\u4e03\\u725b\\u4e91\\u5b58\\u50a8\",\"driver\":\"\\\\plugins\\\\qiniu\\\\lib\\\\Qiniu\"}}}');
 
 -- ----------------------------
@@ -1048,7 +1147,7 @@ CREATE TABLE `lzy_user` (
 -- ----------------------------
 -- Records of lzy_user
 -- ----------------------------
-INSERT INTO `lzy_user` VALUES ('1', '1', '0', '0', '1548163770', '0', '0', '0.00', '1547734948', '1', 'admin', '###a2a46ad1cae937d942c77fb64aab7895', 'admin', 'lzy_email@sina.cn', '', '', '', '127.0.0.1', '', '', null);
+INSERT INTO `lzy_user` VALUES ('1', '1', '0', '0', '1548256789', '0', '0', '0.00', '1547734948', '1', 'admin', '###c43e4e9347171ec5bce359cd9c4ac65f', 'admin', 'lzy_email@sina.cn', '', '', '', '127.0.0.1', '', '', null);
 
 -- ----------------------------
 -- Table structure for lzy_user_action

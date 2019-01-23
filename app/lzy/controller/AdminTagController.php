@@ -8,15 +8,15 @@
 // +----------------------------------------------------------------------
 // | Author:kane < chengjin005@163.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
-use app\portal\model\PortalTagModel;
+use app\lzy\model\PortalTagModel;
 use cmf\controller\AdminBaseController;
 use think\Db;
 
 /**
  * Class AdminTagController 标签管理控制器
- * @package app\portal\controller
+ * @package app\lzy\controller
  */
 class AdminTagController extends AdminBaseController
 {

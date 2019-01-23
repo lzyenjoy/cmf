@@ -8,7 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\model;
+namespace app\lzy\model;
 
 use app\admin\model\RouteModel;
 use think\db\Query;

@@ -8,9 +8,9 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\api;
+namespace app\lzy\api;
 
-use app\portal\model\PortalCategoryModel;
+use app\lzy\model\PortalCategoryModel;
 use think\db\Query;
 
 class CategoryApi

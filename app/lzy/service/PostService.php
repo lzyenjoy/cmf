@@ -8,9 +8,9 @@
 // +----------------------------------------------------------------------
 // | Author: 小夏 < 449134904@qq.com>
 // +----------------------------------------------------------------------
-namespace app\portal\service;
+namespace app\lzy\service;
 
-use app\portal\model\PortalPostModel;
+use app\lzy\model\PortalPostModel;
 use think\db\Query;
 
 class PostService

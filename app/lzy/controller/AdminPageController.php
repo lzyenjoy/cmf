@@ -8,12 +8,12 @@
 // +----------------------------------------------------------------------
 // | Author: 小夏 < 449134904@qq.com>
 // +----------------------------------------------------------------------
-namespace app\portal\controller;
+namespace app\lzy\controller;
 
 use app\admin\model\RouteModel;
 use cmf\controller\AdminBaseController;
-use app\portal\model\PortalPostModel;
-use app\portal\service\PostService;
+use app\lzy\model\PortalPostModel;
+use app\lzy\service\PostService;
 use app\admin\model\ThemeModel;
 
 class AdminPageController extends AdminBaseController
