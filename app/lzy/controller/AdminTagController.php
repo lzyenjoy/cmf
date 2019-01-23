@@ -24,7 +24,7 @@ class AdminTagController extends AdminBaseController
      * 文章标签管理
      * @adminMenu(
      *     'name'   => '文章标签',
-     *     'parent' => 'portal/AdminIndex/default',
+     *     'parent' => 'lzy/AdminIndex/default',
      *     'display'=> true,
      *     'hasView'=> true,
      *     'order'  => 10000,

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-01-23 23:43:15
+Date: 2019-01-23 23:50:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,7 +36,7 @@ CREATE TABLE `lzy_admin_menu` (
   KEY `status` (`status`),
   KEY `parent_id` (`parent_id`),
   KEY `controller` (`controller`)
-) ENGINE=InnoDB AUTO_INCREMENT=214 DEFAULT CHARSET=utf8mb4 COMMENT='后台菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=utf8mb4 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of lzy_admin_menu
@@ -251,6 +251,7 @@ INSERT INTO `lzy_admin_menu` VALUES ('209', '204', '2', '0', '10000', 'lzy', 'Ad
 INSERT INTO `lzy_admin_menu` VALUES ('210', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'publish', '', '文章发布', '', '文章发布');
 INSERT INTO `lzy_admin_menu` VALUES ('211', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'top', '', '文章置顶', '', '文章置顶');
 INSERT INTO `lzy_admin_menu` VALUES ('212', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'recommend', '', '文章推荐', '', '文章推荐');
+INSERT INTO `lzy_admin_menu` VALUES ('214', '0', '0', '1', '30', 'lzy', 'AdminIndex', 'default', '', '门户管理', 'th', '门户管理');
 
 -- ----------------------------
 -- Table structure for lzy_asset
