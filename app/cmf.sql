@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
+Source Server         : 本地数据库
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : cmf
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-01-23 23:50:34
+Date: 2019-01-24 17:26:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,7 +36,7 @@ CREATE TABLE `lzy_admin_menu` (
   KEY `status` (`status`),
   KEY `parent_id` (`parent_id`),
   KEY `controller` (`controller`)
-) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=utf8mb4 COMMENT='后台菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=216 DEFAULT CHARSET=utf8mb4 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of lzy_admin_menu
@@ -235,14 +235,6 @@ INSERT INTO `lzy_admin_menu` VALUES ('192', '190', '2', '0', '10000', 'lzy', 'Ad
 INSERT INTO `lzy_admin_menu` VALUES ('193', '190', '2', '0', '10000', 'lzy', 'AdminTag', 'upStatus', '', '更新标签状态', '', '更新标签状态');
 INSERT INTO `lzy_admin_menu` VALUES ('194', '190', '2', '0', '10000', 'lzy', 'AdminTag', 'delete', '', '删除文章标签', '', '删除文章标签');
 INSERT INTO `lzy_admin_menu` VALUES ('195', '132', '2', '0', '10000', 'portal', 'AdminCategory', 'toggle', '', '文章分类显示隐藏', '', '文章分类显示隐藏');
-INSERT INTO `lzy_admin_menu` VALUES ('196', '6', '1', '1', '50', 'admin', 'Test', 'index', '', '测试链接', '', '测试链接管理');
-INSERT INTO `lzy_admin_menu` VALUES ('197', '196', '1', '0', '10000', 'admin', 'Test', 'add', '', '添加友情链接', '', '添加友情链接');
-INSERT INTO `lzy_admin_menu` VALUES ('198', '196', '2', '0', '10000', 'admin', 'Test', 'addPost', '', '添加友情链接提交保存', '', '添加友情链接提交保存');
-INSERT INTO `lzy_admin_menu` VALUES ('199', '196', '1', '0', '10000', 'admin', 'Test', 'edit', '', '编辑友情链接', '', '编辑友情链接');
-INSERT INTO `lzy_admin_menu` VALUES ('200', '196', '2', '0', '10000', 'admin', 'Test', 'editPost', '', '编辑友情链接提交保存', '', '编辑友情链接提交保存');
-INSERT INTO `lzy_admin_menu` VALUES ('201', '196', '2', '0', '10000', 'admin', 'Test', 'delete', '', '删除友情链接', '', '删除友情链接');
-INSERT INTO `lzy_admin_menu` VALUES ('202', '196', '2', '0', '10000', 'admin', 'Test', 'listOrder', '', '友情链接排序', '', '友情链接排序');
-INSERT INTO `lzy_admin_menu` VALUES ('203', '196', '2', '0', '10000', 'admin', 'Test', 'toggle', '', '友情链接显示隐藏', '', '友情链接显示隐藏');
 INSERT INTO `lzy_admin_menu` VALUES ('204', '121', '1', '1', '10000', 'lzy', 'AdminShop', 'index', '', '测试注解管理', '', '测试注解管理');
 INSERT INTO `lzy_admin_menu` VALUES ('206', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'addPost', '', '添加文章提交', '', '添加文章提交');
 INSERT INTO `lzy_admin_menu` VALUES ('207', '204', '1', '0', '10000', 'lzy', 'AdminShop', 'edit', '', '编辑文章', '', '编辑文章');
@@ -251,7 +243,7 @@ INSERT INTO `lzy_admin_menu` VALUES ('209', '204', '2', '0', '10000', 'lzy', 'Ad
 INSERT INTO `lzy_admin_menu` VALUES ('210', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'publish', '', '文章发布', '', '文章发布');
 INSERT INTO `lzy_admin_menu` VALUES ('211', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'top', '', '文章置顶', '', '文章置顶');
 INSERT INTO `lzy_admin_menu` VALUES ('212', '204', '2', '0', '10000', 'lzy', 'AdminShop', 'recommend', '', '文章推荐', '', '文章推荐');
-INSERT INTO `lzy_admin_menu` VALUES ('214', '0', '0', '1', '30', 'lzy', 'AdminIndex', 'default', '', '门户管理', 'th', '门户管理');
+INSERT INTO `lzy_admin_menu` VALUES ('215', '0', '0', '1', '30', 'lzy', 'AdminIndex', 'default', '', '门户管理', 'th', '门户管理');
 
 -- ----------------------------
 -- Table structure for lzy_asset
@@ -709,13 +701,14 @@ CREATE TABLE `lzy_nav` (
   `name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '导航位置名称',
   `remark` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='前台导航位置表';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COMMENT='前台导航位置表';
 
 -- ----------------------------
 -- Records of lzy_nav
 -- ----------------------------
-INSERT INTO `lzy_nav` VALUES ('1', '1', '主导航', '主导航');
+INSERT INTO `lzy_nav` VALUES ('1', '0', '主导航', '主导航');
 INSERT INTO `lzy_nav` VALUES ('2', '0', '底部导航', '');
+INSERT INTO `lzy_nav` VALUES ('3', '1', '装修的首页', '我好像不是主导航');
 
 -- ----------------------------
 -- Table structure for lzy_nav_menu
@@ -733,12 +726,30 @@ CREATE TABLE `lzy_nav_menu` (
   `icon` varchar(20) NOT NULL DEFAULT '' COMMENT '图标',
   `path` varchar(255) NOT NULL DEFAULT '' COMMENT '层级关系',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='前台导航菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COMMENT='前台导航菜单表';
 
 -- ----------------------------
 -- Records of lzy_nav_menu
 -- ----------------------------
 INSERT INTO `lzy_nav_menu` VALUES ('1', '1', '0', '1', '0', '首页', '', 'home', '', '0-1');
+INSERT INTO `lzy_nav_menu` VALUES ('2', '3', '0', '1', '10000', '首页', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('3', '3', '0', '1', '10000', '关于', '', '', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('4', '3', '3', '1', '10000', '关于我们', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('5', '3', '3', '1', '10000', '公司荣誉', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('6', '3', '3', '1', '10000', '设计团队', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('7', '3', '3', '1', '10000', '服务流程', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('8', '3', '0', '1', '10000', '产品', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('9', '3', '8', '1', '10000', '建材', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('10', '3', '8', '1', '10000', '家具', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('11', '3', '8', '1', '10000', '软装', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('12', '3', '8', '1', '10000', '家电', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('13', '3', '0', '1', '10000', '案例', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('14', '3', '13', '1', '10000', '客厅设计', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('15', '3', '13', '1', '10000', '卧室设计', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('16', '3', '13', '1', '10000', '厨房设计', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('17', '3', '0', '1', '10000', '资讯', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('18', '3', '17', '1', '10000', '装修搭配', '', 'home', '', '');
+INSERT INTO `lzy_nav_menu` VALUES ('19', '3', '17', '1', '10000', '软装改造', '', 'home', '', '');
 
 -- ----------------------------
 -- Table structure for lzy_option
@@ -756,7 +767,7 @@ CREATE TABLE `lzy_option` (
 -- ----------------------------
 -- Records of lzy_option
 -- ----------------------------
-INSERT INTO `lzy_option` VALUES ('1', '1', 'site_info', '{\"site_name\":\"\\u7f57\\u5fd7\\u79b9\\u7684\\u4e13\\u4fee\",\"site_seo_title\":\"\\u7f57\\u5fd7\\u79b9\\u7684\\u88c5\\u4fee\",\"site_seo_keywords\":\"\\u88c5\\u4fee,\\u4fbf\\u5b9c\",\"site_seo_description\":\"ThinkCMF\\u662f\\u7b80\\u7ea6\\u98ce\\u7f51\\u7edc\\u79d1\\u6280\\u53d1\\u5e03\\u7684\\u4e00\\u6b3e\\u7528\\u4e8e\\u5feb\\u901f\\u5f00\\u53d1\\u7684\\u5185\\u5bb9\\u7ba1\\u7406\\u6846\\u67b6\",\"site_icp\":\"\",\"site_gwa\":\"\",\"site_admin_email\":\"\",\"site_analytics\":\"\"}');
+INSERT INTO `lzy_option` VALUES ('1', '1', 'site_info', '{\"site_name\":\"\\u7f57\\u5fd7\\u79b9\\u7684\\u4e13\\u4fee\",\"site_seo_title\":\"\\u7f57\\u5fd7\\u79b9\\u7684\\u88c5\\u4fee\",\"site_seo_keywords\":\"\\u88c5\\u4fee,\\u4fbf\\u5b9c\",\"site_seo_description\":\"ThinkCMF\\u662f\\u7b80\\u7ea6\\u98ce\\u7f51\\u7edc\\u79d1\\u6280\\u53d1\\u5e03\\u7684\\u4e00\\u6b3e\\u7528\\u4e8e\\u5feb\\u901f\\u5f00\\u53d1\\u7684\\u5185\\u5bb9\\u7ba1\\u7406\\u6846\\u67b6\",\"site_icp\":\"11000002898986\\u53f7\",\"site_gwa\":\"11000002000016\\u53f7\",\"site_admin_email\":\"lzy_email@sina.cn\",\"site_analytics\":\"php+html5+css+js\"}');
 INSERT INTO `lzy_option` VALUES ('2', '1', 'cmf_settings', '{\"open_registration\":\"0\",\"banned_usernames\":\"\"}');
 INSERT INTO `lzy_option` VALUES ('3', '1', 'cdn_settings', '{\"cdn_static_root\":\"\"}');
 INSERT INTO `lzy_option` VALUES ('4', '1', 'admin_settings', '{\"admin_password\":\"\",\"admin_style\":\"flatadmin\"}');
@@ -1148,7 +1159,7 @@ CREATE TABLE `lzy_user` (
 -- ----------------------------
 -- Records of lzy_user
 -- ----------------------------
-INSERT INTO `lzy_user` VALUES ('1', '1', '0', '0', '1548256789', '0', '0', '0.00', '1547734948', '1', 'admin', '###c43e4e9347171ec5bce359cd9c4ac65f', 'admin', 'lzy_email@sina.cn', '', '', '', '127.0.0.1', '', '', null);
+INSERT INTO `lzy_user` VALUES ('1', '1', '0', '0', '1548310204', '0', '0', '0.00', '1547734948', '1', 'admin', '###c43e4e9347171ec5bce359cd9c4ac65f', 'admin', 'lzy_email@sina.cn', '', '', '', '127.0.0.1', '', '', null);
 
 -- ----------------------------
 -- Table structure for lzy_user_action

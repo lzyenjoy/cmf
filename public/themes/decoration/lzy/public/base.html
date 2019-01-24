@@ -13,6 +13,9 @@
     <link href="__TMPL__/lzy/public/assets/css/owl.theme.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1470031228_4077797.css"/>
     <link rel="stylesheet" type="text/css" href="__TMPL__/lzy/public/assets/css/main.css"/>
+
+    <taglib name="app\lzy\taglib\Portal"/>
+
 </head>
 <body style="background: #fff;">
 <block name="navbar">
@@ -23,44 +26,33 @@
                 <a href="#"><img src="__TMPL__/lzy/public/assets/images/logo.png"/></a>
             </h1>
             <div id="nav-menu" class="wow bounceInRight">
-                <ul class="menu">
-                    <li class="stmenu"><a href="index.html" class="xialaguang">首页</a></li>
-                    <li class="stmenu">
-                        <a href="ab.html" class="xialaguang">关于<i></i></a>
-                        <ul class="children">
-                            <li><a href="ab.html">关于我们</a></li>
-                            <li><a href="ab.html">公司荣誉</a></li>
-                            <li><a href="ab.html">设计团队</a></li>
-                            <li><a href="ab.html">服务流程</a></li>
-                        </ul>
-                    </li>
-                    <li class="stmenu">
-                        <a href="cp.html" class="xialaguang">产品<i></i></a>
-                        <ul class="children">
-                            <li><a href="cp.html">建材</a></li>
-                            <li><a href="cp.html">家具</a></li>
-                            <li><a href="cp.html">软装</a></li>
-                            <li><a href="cp.html">家电</a></li>
-                        </ul>
-                    </li>
-                    <li class="stmenu">
-                        <a href="zx.html" class="xialaguang">案例<i></i></a>
-                        <ul class="children">
-                            <li><a href="zx.html">客厅设计</a></li>
-                            <li><a href="zx.html">卧室设计</a></li>
-                            <li><a href="zx.html">厨房设计</a></li>
-                        </ul>
-                    </li>
-                    <li class="stmenu">
-                        <a href="xm.html" class="xialaguang">资讯<i></i></a>
-                        <ul class="children">
-                            <li><a href="xm.html">装修搭配</a></li>
-                            <li><a href="xm.html">软装改造</a></li>
-                        </ul>
-                    </li>
-                    <li class="stmenu"><a href="lx.html" class="xialaguang">联系</a></li>
+                <!--<ul class="menu">-->
+                    <!--<li class="stmenu"><a href="index.html" class="xialaguang">首页</a></li>-->
+                    <!--<li class="stmenu">-->
+                        <!--<a href="xm.html" class="xialaguang">资讯<i></i></a>-->
+                        <!--<ul class="children">-->
+                            <!--<li><a href="xm.html">装修搭配</a></li>-->
+                            <!--<li><a href="xm.html">软装改造</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class="stmenu"><a href="lx.html" class="xialaguang">联系</a></li>-->
 
-                </ul>
+                <!--</ul>-->
+
+
+
+                <!--后台导航 id 为1-->
+                    <navigation nav-id="3" root="ul" class="menu">
+                        <navigationMenu root="li" class="stmenu">
+                             <a href="{$menu.href|default=''}" class="xialaguang" target="{$menu.target|default=''}" >{$menu.name|default=''}</a>
+                        </navigationMenu>
+
+                        <navigationFolder root="li" class="stmenu" dropdown="ul"
+                                          dropdown-class="children">
+                           <a href="{$menu.href|default=''}">{$menu.name|default=''}</a>
+                        </navigationFolder>
+
+                    </navigation>
             </div>
 
             <div class="nav-logo" id="left-menu">

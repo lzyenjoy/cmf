@@ -8,7 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\taglib;
+namespace app\lzy\taglib;
 
 use think\template\TagLib;
 
