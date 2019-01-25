@@ -1,0 +1,90 @@
+{
+    "name": "首页",
+    "action": "lzy/Index/index",
+    "description": "首页模板文件",
+    "order": 5.0,
+    "more": {
+        "vars": {
+            "index_top_slide": {
+                "title": "顶部幻灯片",
+                "value": "1",
+                "type": "text",
+                "dataSource": {
+                    "api": "admin/Slide/index",
+                    "multi": false
+                },
+                "placeholder": "请选择首页顶部幻灯片",
+                "tip": "首页顶部幻灯片",
+                "rule": {
+                    "require": true
+                }
+            }
+        },
+        "widgets": {
+            "three_floor": {
+                "title": "level-3层的文字介绍",
+                "display": "1",
+                "vars": {
+                    "sub_title": {
+                        "title": "这个不用管",
+                        "value": "这个不用管，这个不用管",
+                        "type": "text",
+                        "placeholder": "这个不用管",
+                        "tip": "",
+                        "rule": {
+                            "require": false
+                        }
+                    },
+                    "three_floor_text": {
+                        "title": "level-3层文字内容",
+                        "value": [
+                            {
+                                "title": "MVC分层模式",
+                                "icon": "bars",
+                                "content": "使用MVC应用程序被分成三个核心部件：模型（M）、视图（V）、控制器（C），他不是一个新的概念，只是ThinkCMF将其发挥到了极致。"
+                            },
+                            {
+                                "title": "用户管理",
+                                "icon": "group",
+                                "content": "ThinkCMF内置了灵活的用户管理方式，并可直接与第三方站点进行互联互通，如果你愿意甚至可以对单个用户或群体用户的行为进行记录及分享，为您的运营决策提供有效参考数据。"
+                            },
+                            {
+                                "title": "云端部署",
+                                "icon": "cloud",
+                                "content": "通过驱动的方式可以轻松支持云平台的部署，让你的网站无缝迁移，内置已经支持SAE、BAE，正式版将对云端部署进行进一步优化。"
+                            },
+                            {
+                                "title": "安全策略",
+                                "icon": "heart",
+                                "content": "提供的稳健的安全策略，包括备份恢复，容错，防治恶意攻击登陆，网页防篡改等多项安全管理功能，保证系统安全，可靠，稳定的运行。"
+                            }
+                        ],
+                        "type": "array",
+                        "item": {
+                            "title": {
+                                "title": "标题",
+                                "value": "group",
+                                "type": "text",
+                                "rule": {
+                                    "require": true
+                                }
+                            },
+                            "icon": {
+                                "title": "图标",
+                                "value": "group",
+                                "type": "text"
+                            },
+                            "content": {
+                                "title": "描述",
+                                "value": "group",
+                                "type": "textarea"
+                            }
+                        },
+                        "tip": ""
+
+                    }
+                }
+            }
+        }
+    }
+}

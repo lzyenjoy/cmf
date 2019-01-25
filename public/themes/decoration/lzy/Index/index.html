@@ -2,84 +2,105 @@
 <!--轮播图-->
 <block name="content">
     <div class="ad clearfix wow pulse"  data-wow-delay=".4s">
+        <php>
+            $top_slide_id=empty($theme_vars['index_top_slide'])?1:$theme_vars['index_top_slide'];
+        </php>
         <div id="owl-demo" class="owl-carousel">
-            <div class="item">
-                <picture>
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad001-l.jpg" media="(min-width:50em)">
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad001-m.jpg" media="(min-width:30em)">
-                    <img src="__TMPL__/lzy/public/assets/images/ad001.jpg" alt="">
-                </picture>
-            </div>
-            <div class="item">
-                <picture>
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad002-l.jpg" media="(min-width: 50em)">
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad002-m.jpg" media="(min-width: 30em)">
-                    <img srcset="__TMPL__/lzy/public/assets/images/ad002.jpg" alt="">
-                </picture>
-            </div>
-            <div class="item">
-                <picture>
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad001-l.jpg" media="(min-width:50em)">
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad001-m.jpg" media="(min-width:30em)">
-                    <img src="__TMPL__/lzy/public/assets/images/ad001.jpg" alt="">
-                </picture>
-            </div>
-            <div class="item">
-                <picture>
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad002-l.jpg" media="(min-width: 50em)">
-                    <source srcset="__TMPL__/lzy/public/assets/images/ad002-m.jpg" media="(min-width: 30em)">
-                    <img srcset="__TMPL__/lzy/public/assets/images/ad002.jpg" alt="">
-                </picture>
-            </div>
+            <slides id="$top_slide_id">
+                <div class="item">
+                    <picture>
+                        <source srcset="{:cmf_get_image_url($vo.image)}" media="(min-width:50em)">
+                        <source srcset="{:cmf_get_image_url($vo.image)}" media="(min-width:30em)">
+                        <img src="{:cmf_get_image_url($vo.image)}" alt="">
+                    </picture>
+                </div>
+            </slides>
+            <noslides id="1">
+                <div class="item">
+                    <picture>
+                        <source srcset="__TMPL__/lzy/public/assets/images/ad001-l.jpg" media="(min-width:50em)">
+                        <source srcset="__TMPL__/lzy/public/assets/images/ad001-m.jpg" media="(min-width:30em)">
+                        <img src="__TMPL__/lzy/public/assets/images/ad001.jpg" alt="">
+                    </picture>
+                </div>
+            </noslides>
         </div>
     </div>
     <!--level-3 简介-->
-    <ul class="container clearfix columns-box">
-        <li class="wow bounceInDown" data-wow-delay=".1s">
-            <a href="#">
-                <i class="iconfont icon-home"></i>
-                <h2>关于我们</h2>
-                <p>
-                    室内设计（香港）有限公司作为一家致力于
-                    商业办公、酒店会所、别墅私宅、陶瓷
-                    展厅空间的专业设计机构。
-                </p>
-            </a>
-        </li>
-        <li class="wow bounceInDown" data-wow-delay=".2s">
-            <a href="#">
-                <i class="iconfont icon-trophy"></i>
-                <h2>公司荣誉</h2>
-                <p>
-                    室内设计（香港）有限公司作为一家致力于
-                    商业办公、酒店会所、别墅私宅、陶瓷
-                    展厅空间的专业设计机构。
-                </p>
-            </a>
-        </li>
-        <li class="wow bounceInDown" data-wow-delay=".3s">
-            <a href="#">
-                <i class="iconfont icon-tuandui2"></i>
-                <h2>设计团队</h2>
-                <p>
-                    室内设计（香港）有限公司作为一家致力于
-                    商业办公、酒店会所、别墅私宅、陶瓷
-                    展厅空间的专业设计机构。
-                </p>
-            </a>
-        </li>
-        <li class="wow bounceInDown" data-wow-delay=".4s">
-            <a href="#">
-                <i class="iconfont icon-21chakanliucheng"></i>
-                <h2>服务流程</h2>
-                <p>
-                    室内设计（香港）有限公司作为一家致力于
-                    商业办公、酒店会所、别墅私宅、陶瓷
-                    展厅空间的专业设计机构。
-                </p>
-            </a>
-        </li>
-    </ul>
+    <!--<ul class="container clearfix columns-box">-->
+        <!--<li class="wow bounceInDown" data-wow-delay=".1s">-->
+            <!--<a href="#">-->
+                <!--<i class="iconfont icon-home"></i>-->
+                <!--<h2>关于我们</h2>-->
+                <!--<p>-->
+                    <!--室内设计（香港）有限公司作为一家致力于-->
+                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
+                    <!--展厅空间的专业设计机构。-->
+                <!--</p>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="wow bounceInDown" data-wow-delay=".2s">-->
+            <!--<a href="#">-->
+                <!--<i class="iconfont icon-trophy"></i>-->
+                <!--<h2>公司荣誉</h2>-->
+                <!--<p>-->
+                    <!--室内设计（香港）有限公司作为一家致力于-->
+                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
+                    <!--展厅空间的专业设计机构。-->
+                <!--</p>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="wow bounceInDown" data-wow-delay=".3s">-->
+            <!--<a href="#">-->
+                <!--<i class="iconfont icon-tuandui2"></i>-->
+                <!--<h2>设计团队</h2>-->
+                <!--<p>-->
+                    <!--室内设计（香港）有限公司作为一家致力于-->
+                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
+                    <!--展厅空间的专业设计机构。-->
+                <!--</p>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="wow bounceInDown" data-wow-delay=".4s">-->
+            <!--<a href="#">-->
+                <!--<i class="iconfont icon-21chakanliucheng"></i>-->
+                <!--<h2>服务流程</h2>-->
+                <!--<p>-->
+                    <!--室内设计（香港）有限公司作为一家致力于-->
+                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
+                    <!--展厅空间的专业设计机构。-->
+                <!--</p>-->
+            <!--</a>-->
+        <!--</li>-->
+
+
+        <widget name="three_floor">
+
+            <php>
+                $features_count = count($widget['vars']['three_floor_text']);
+                $rows = ceil($features_count/4);
+            </php>
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*4;
+                    $features = array_slice($widget['vars']['three_floor_text'],$first_row,4);
+                </php>
+                <ul class="container clearfix columns-box">
+                    <foreach name="three_floor_text" item="vo">
+                        <li class="wow bounceInDown" data-wow-delay=".4s">
+                            <a href="#">
+                                <i class="iconfont icon-21chakanliucheng"></i>
+                                <h2>{$vo.title}</h2>
+                                <p>
+                                    {$vo.content}
+                                </p>
+                            </a>
+                        </li>
+
+                    </foreach>
+                </ul>
+            </for>
+        </widget>
 
     <!--关于我们简介-->
     <section class="clearfix abouts-index">

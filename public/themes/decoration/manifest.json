@@ -1,10 +1,10 @@
 {
   "name": "decoration",
   "version": "1.0.2",
-  "demo_url": "http://demo.thinkcmf.com",
+  "demo_url": "http://company.cmf.com",
   "author": "罗志禹",
   "lang": "zh-cn",
-  "author_url": "http://www.thinkcmf.com",
+  "author_url": "https://github.com/lzyenjoy/cmf.git",
   "keywords": "罗志禹的模板",
   "description": "罗志禹的默认模板"
 }
