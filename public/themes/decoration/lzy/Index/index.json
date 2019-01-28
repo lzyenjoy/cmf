@@ -21,7 +21,7 @@
             }
         },
         "widgets": {
-            "three_floor": {
+            "threeFloor": {
                 "title": "level-3层的文字介绍",
                 "display": "1",
                 "vars": {
@@ -35,7 +35,7 @@
                             "require": false
                         }
                     },
-                    "three_floor_text": {
+                    "threeText": {
                         "title": "level-3层文字内容",
                         "value": [
                             {

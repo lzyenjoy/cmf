@@ -27,85 +27,34 @@
         </div>
     </div>
     <!--level-3 简介-->
-    <!--<ul class="container clearfix columns-box">-->
-        <!--<li class="wow bounceInDown" data-wow-delay=".1s">-->
-            <!--<a href="#">-->
-                <!--<i class="iconfont icon-home"></i>-->
-                <!--<h2>关于我们</h2>-->
-                <!--<p>-->
-                    <!--室内设计（香港）有限公司作为一家致力于-->
-                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
-                    <!--展厅空间的专业设计机构。-->
-                <!--</p>-->
-            <!--</a>-->
-        <!--</li>-->
-        <!--<li class="wow bounceInDown" data-wow-delay=".2s">-->
-            <!--<a href="#">-->
-                <!--<i class="iconfont icon-trophy"></i>-->
-                <!--<h2>公司荣誉</h2>-->
-                <!--<p>-->
-                    <!--室内设计（香港）有限公司作为一家致力于-->
-                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
-                    <!--展厅空间的专业设计机构。-->
-                <!--</p>-->
-            <!--</a>-->
-        <!--</li>-->
-        <!--<li class="wow bounceInDown" data-wow-delay=".3s">-->
-            <!--<a href="#">-->
-                <!--<i class="iconfont icon-tuandui2"></i>-->
-                <!--<h2>设计团队</h2>-->
-                <!--<p>-->
-                    <!--室内设计（香港）有限公司作为一家致力于-->
-                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
-                    <!--展厅空间的专业设计机构。-->
-                <!--</p>-->
-            <!--</a>-->
-        <!--</li>-->
-        <!--<li class="wow bounceInDown" data-wow-delay=".4s">-->
-            <!--<a href="#">-->
-                <!--<i class="iconfont icon-21chakanliucheng"></i>-->
-                <!--<h2>服务流程</h2>-->
-                <!--<p>-->
-                    <!--室内设计（香港）有限公司作为一家致力于-->
-                    <!--商业办公、酒店会所、别墅私宅、陶瓷-->
-                    <!--展厅空间的专业设计机构。-->
-                <!--</p>-->
-            <!--</a>-->
-        <!--</li>-->
-
-
-        <widget name="three_floor">
-
+    <widget name="threeFloor">
+        <ul class="container clearfix columns-box">
             <php>
-                $features_count = count($widget['vars']['three_floor_text']);
+                $features_count = count($widget['vars']['threeText']);
                 $rows = ceil($features_count/4);
             </php>
-            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+            <for start="1" end="$rows" comparison="elt" step="1" name="k">
                 <php>
-                    $first_row = ($row-1)*4;
-                    $features = array_slice($widget['vars']['three_floor_text'],$first_row,4);
+                    $first_row = ($k-1)*4;
+                    $features = array_slice($widget['vars']['threeText'],$first_row,4);
                 </php>
-                <ul class="container clearfix columns-box">
-                    <foreach name="three_floor_text" item="vo">
-                        <li class="wow bounceInDown" data-wow-delay=".4s">
-                            <a href="#">
-                                <i class="iconfont icon-21chakanliucheng"></i>
-                                <h2>{$vo.title}</h2>
-                                <p>
-                                    {$vo.content}
-                                </p>
-                            </a>
-                        </li>
-
-                    </foreach>
-                </ul>
+                <foreach name="features" item="vo"  key="kn" >
+                    <li class="wow bounceInDown" data-wow-delay=".{$kn+1}s">
+                        <a href="#">
+                            <i class="iconfont {$vo.icon}"></i>
+                            <h2>{$vo.title}</h2>
+                            <p>{$vo.content}</p>
+                        </a>
+                    </li>
+                </foreach>
             </for>
-        </widget>
-
-    <!--关于我们简介-->
+        </ul>
+    </widget>
+    <!--关于我们-->
     <section class="clearfix abouts-index">
         <div class="abouts-imgs wow bounceInLeft">
             <div class="abouts-fixed wow pulse" data-wow-delay=".6s" style="display: block; background-image:url(__TMPL__/lzy/public/assets/images/ab.jpg);"></div>
+
         </div>
 
         <div class="abouts-text wow bounceInRight">
@@ -115,6 +64,7 @@
             <a class="abouts-button" href="#">更多介绍</a>
         </div>
     </section>
+
     <!--设计团队简介-->
     <section class="clearfix team-index wow bounceInLeft">
         <div class="abouts-text">
