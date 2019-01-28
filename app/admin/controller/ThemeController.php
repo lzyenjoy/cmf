@@ -770,7 +770,6 @@ class ThemeController extends AdminBaseController
                         $more['widgets'][$mWidgetName] = $widget;
                     }
                 }
-
                 $more = json_encode($more);
                 Db::name('theme_file')->where('id', $id)->update(['more' => $more]);
             }

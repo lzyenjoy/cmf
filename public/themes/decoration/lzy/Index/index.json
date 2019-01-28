@@ -25,16 +25,6 @@
                 "title": "level-3层的文字介绍",
                 "display": "1",
                 "vars": {
-                    "sub_title": {
-                        "title": "这个不用管",
-                        "value": "这个不用管，这个不用管",
-                        "type": "text",
-                        "placeholder": "这个不用管",
-                        "tip": "",
-                        "rule": {
-                            "require": false
-                        }
-                    },
                     "threeText": {
                         "title": "level-3层文字内容",
                         "value": [
