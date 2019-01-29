@@ -290,7 +290,6 @@ class ThemeController extends AdminBaseController
 
                 $files[$key] = $mFile;
             }
-
             $this->assign('tab', $tab);
             $this->assign('files', $files);
             $this->assign('file', $file);
@@ -766,7 +765,6 @@ class ThemeController extends AdminBaseController
                                 $this->error($widget['title'] . ':' . $validate->getError());
                             }
                         }
-
                         $more['widgets'][$mWidgetName] = $widget;
                     }
                 }
@@ -797,7 +795,6 @@ class ThemeController extends AdminBaseController
                 array_push($newRules, $key);
             }
         }
-
         return $newRules;
     }
 

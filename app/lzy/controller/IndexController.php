@@ -11,6 +11,7 @@
 namespace app\lzy\controller;
 
 use cmf\controller\HomeBaseController;
+use think\Config;
 
 class IndexController extends HomeBaseController
 {
@@ -19,7 +20,7 @@ class IndexController extends HomeBaseController
         return $this->fetch();
     }
     public function CreatPass(){
-        $result = "###" . md5(md5(config('database.authcode') . '123456'));
-        echo $result;die;
+            //获取全部配置项
+        dump(Config::get());
     }
 }
