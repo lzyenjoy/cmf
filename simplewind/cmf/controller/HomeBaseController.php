@@ -33,6 +33,7 @@ class HomeBaseController extends BaseController
 
         $themePath = "{$cmfThemePath}{$cmfDefaultTheme}";
 
+
         $root = cmf_get_root();
         //使cdn设置生效
         $cdnSettings = cmf_get_option('cdn_settings');
@@ -80,7 +81,9 @@ class HomeBaseController extends BaseController
      */
     protected function fetch($template = '', $vars = [], $replace = [], $config = [])
     {
+
         $template = $this->parseTemplate($template);
+
         $more     = $this->getThemeFileMore($template);
         $this->assign('theme_vars', $more['vars']);
         $this->assign('theme_widgets', $more['widgets']);

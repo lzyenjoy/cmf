@@ -144,7 +144,6 @@ function cmf_get_current_theme()
     } elseif (cookie('cmf_design_theme')) {
         $theme = cookie('cmf_design_theme');
     }
-
     $_currentTheme = $theme;
 
     return $theme;

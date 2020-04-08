@@ -25,6 +25,16 @@
         "title": "level-3层的文字介绍",
         "display": "1",
         "vars": {
+          "widgets_2": {
+            "title": "必须加这个",
+            "value": "必须加这个才能够使用",
+            "type": "text",
+            "placeholder": "请输入副标题",
+            "tip": "",
+            "rule": {
+              "require": true
+            }
+          },
           "threeText": {
             "title": "level-3层文字内容",
             "value": [
